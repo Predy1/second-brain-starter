@@ -1,0 +1,26 @@
+{
+  "output": {
+    "filePath": "REPOPACK_CONTEXT.md",
+    "style": "markdown",
+    "removeComments": false,
+    "showLineNumbers": false
+  },
+  "include": [
+    "*.md",
+    "*.yaml",
+    "*.template",
+    "2_Wiki/**/*.md",
+    "3_System/**/*.md",
+    "memory/**/*.md"
+  ],
+  "exclude": [
+    ".git/**",
+    ".obsidian/plugins/**",
+    ".obsidian/themes/**",
+    ".obsidian/snippets/**",
+    ".obsidian/workspace.json",
+    ".obsidian/workspace-mobile.json",
+    "REPOPACK_CONTEXT.md",
+    "Outputs/**"
+  ]
+}

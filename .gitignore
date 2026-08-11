@@ -1,0 +1,21 @@
+# === SECRETE — NU urca niciodată în git ===
+*.key
+*KEY*.txt
+.env
+litellm_config.yaml
+Start_Reasonix.bat
+
+# === LOCAL ONLY — varianta personalizată (nu se publică) ===
+_local/
+
+# === OBSIDIAN WORKSPACE (se schimbă la fiecare sesiune) ===
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# === PYTHON ===
+__pycache__/
+*.pyc
+
+# === OS ===
+Thumbs.db
+.DS_Store

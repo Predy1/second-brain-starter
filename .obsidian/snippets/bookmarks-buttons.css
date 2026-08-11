@@ -1,0 +1,35 @@
+/* === Bookmarks styled as buttons === */
+
+/* Group headers — colored, bold, like section titles */
+.bookmark-group {
+  margin-top: 12px !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  background: var(--background-secondary) !important;
+}
+
+/* Individual bookmark items — card-style buttons */
+.bookmark-item {
+  margin: 3px 8px !important;
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  background: var(--background-primary) !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  transition: all 0.15s ease !important;
+}
+
+/* Hover effect */
+.bookmark-item:hover {
+  background: var(--background-secondary) !important;
+  border-color: var(--interactive-accent) !important;
+  transform: translateX(2px) !important;
+}
+
+/* Bookmark icon */
+.bookmark-item .tree-item-icon {
+  opacity: 0.8 !important;
+}

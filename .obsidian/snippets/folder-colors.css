@@ -1,0 +1,83 @@
+/* ============================================================
+   FOLDER COLORS — Warm & Vibrant Palette
+   ============================================================ */
+
+/* ===== TRADING — 🔵 Blue ===== */
+.nav-folder-title[data-path="2_Wiki/Trading"] .nav-folder-title-content {
+  color: #448AFF;
+  font-weight: 600;
+}
+
+/* ===== SECOND BRAIN — 🟣 Purple ===== */
+.nav-folder-title[data-path="2_Wiki/Second_Brain"] .nav-folder-title-content {
+  color: #E040FB;
+  font-weight: 600;
+}
+
+/* ===== PERSONAL — 🧡 Orange ===== */
+.nav-folder-title[data-path="2_Wiki/Personal"] .nav-folder-title-content {
+  color: #FF6B35;
+}
+
+/* ===== BUSINESS — 💛 Gold ===== */
+.nav-folder-title[data-path="2_Wiki/Business"] .nav-folder-title-content {
+  color: #FFD700;
+}
+
+/* ===== JOURNAL — 🟢 Lime ===== */
+.nav-folder-title[data-path="2_Wiki/Journal"] .nav-folder-title-content {
+  color: #69F0AE;
+}
+
+/* ===== CRM — 🔷 Cyan ===== */
+.nav-folder-title[data-path="2_Wiki/CRM"] .nav-folder-title-content {
+  color: #00BCD4;
+}
+
+/* ===== GAMING — 🩷 Hot Pink ===== */
+.nav-folder-title[data-path="2_Wiki/Gaming"] .nav-folder-title-content {
+  color: #FF4081;
+}
+
+/* ===== HEALTH — 🔴 Red ===== */
+.nav-folder-title[data-path="2_Wiki/Health"] .nav-folder-title-content {
+  color: #FF1744;
+}
+
+/* ===== PC / FREELANCE / MEMORY / ATTACHMENTS — Dark gray ===== */
+.nav-folder-title[data-path="2_Wiki/PC_Optimization"] .nav-folder-title-content,
+.nav-folder-title[data-path="2_Wiki/Freelancing"] .nav-folder-title-content,
+.nav-folder-title[data-path="2_Wiki/Memory"] .nav-folder-title-content,
+.nav-folder-title[data-path="2_Wiki/Attachments"] .nav-folder-title-content {
+  color: #757575;
+  font-style: italic;
+}
+
+/* ===== SYSTEM — Blue-gray ===== */
+.nav-folder-title[data-path="3_System"] .nav-folder-title-content {
+  color: #78909C;
+}
+
+/* ===== RAW / CLIPPINGS — Medium gray ===== */
+.nav-folder-title[data-path="1_Raw"] .nav-folder-title-content,
+.nav-folder-title[data-path="Clippings"] .nav-folder-title-content {
+  color: #9E9E9E;
+  font-style: italic;
+}
+
+/* ===== GOAL MASTER — Bright yellow ===== */
+.nav-file-title[data-path="2_Wiki/MASTER_GOAL_05Aug2026.md"] .nav-file-title-content,
+.nav-file-title[data-path="00_MASTER.md"] .nav-file-title-content {
+  color: #FFEA00;
+  font-weight: 700;
+}
+
+/* ===== DASHBOARD — Gold ===== */
+.nav-file-title[data-path="2_Wiki/Dashboard.md"] .nav-file-title-content {
+  color: #FFD700;
+}
+
+/* ===== MOVIES — Pink ===== */
+.nav-file-title[data-path="2_Wiki/Movies_To_Watch.md"] .nav-file-title-content {
+  color: #FF4081;
+}

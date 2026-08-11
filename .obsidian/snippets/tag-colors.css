@@ -1,0 +1,135 @@
+/* ============================================================
+   TAG COLORS — Colorează tag-urile în note și tag pane
+   ============================================================ */
+
+/* ===== STATUS TAGS ===== */
+a.tag[href="#goal-master"],
+.tag[data-tag="goal-master"] {
+  background-color: #ffd700;
+  color: #1a1a1a;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+a.tag[href="#active"],
+.tag[data-tag="active"] {
+  background-color: #2ecc71;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+a.tag[href="#pending"],
+.tag[data-tag="pending"] {
+  background-color: #f39c12;
+  color: #1a1a1a;
+}
+
+a.tag[href="#archived"],
+.tag[data-tag="archived"] {
+  background-color: #95a5a6;
+  color: #1a1a1a;
+}
+
+/* ===== CATEGORY TAGS ===== */
+a.tag[href="#trading"],
+.tag[data-tag="trading"] {
+  background-color: #2ecc71;
+  color: #1a1a1a;
+  border-radius: 3px;
+}
+
+a.tag[href="#ai"],
+.tag[data-tag="ai"] {
+  background-color: #8e44ad;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+a.tag[href="#mindset"],
+.tag[data-tag="mindset"] {
+  background-color: #e91e63;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+a.tag[href="#business"],
+.tag[data-tag="business"] {
+  background-color: #f39c12;
+  color: #1a1a1a;
+  border-radius: 3px;
+}
+
+a.tag[href="#obsidian"],
+a.tag[href="#pkm"],
+.tag[data-tag="obsidian"],
+.tag[data-tag="pkm"] {
+  background-color: #7c4dff;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+a.tag[href="#second-brain"],
+.tag[data-tag="second-brain"] {
+  background-color: #448aff;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+/* ===== PROBLEM/IDEA TAGS ===== */
+a.tag[href="#problemă"],
+a.tag[href="#problem"],
+.tag[data-tag="problemă"],
+.tag[data-tag="problem"] {
+  background-color: #ff5252;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+a.tag[href="#idea"],
+.tag[data-tag="idea"] {
+  background-color: #40c4ff;
+  color: #1a1a1a;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+a.tag[href="#solved"],
+.tag[data-tag="solved"] {
+  background-color: #69f0ae;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* ===== TECH TAGS ===== */
+a.tag[href="#programming"],
+.tag[data-tag="programming"] {
+  background-color: #536dfe;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+a.tag[href="#python"],
+.tag[data-tag="python"] {
+  background-color: #306998;
+  color: #ffd43b;
+  border-radius: 3px;
+}
+
+a.tag[href="#mql5"],
+.tag[data-tag="mql5"] {
+  background-color: #ff6f00;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+/* ===== GENERAL TAG STYLING ===== */
+.tag {
+  transition: all 0.15s ease;
+}
+
+.tag:hover {
+  filter: brightness(1.15);
+  transform: scale(1.05);
+}

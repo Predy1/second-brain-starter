@@ -1,0 +1,61 @@
+/* === Navigation Panel — ewan.my style buttons === */
+
+.navigate .inline-title { display: none !important; }
+
+/* Section labels — like ewan.my folder titles */
+.navigate h1 {
+  font-family: var(--font-text) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  color: var(--text-muted) !important;
+  margin: 24px 0 6px 6px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+.navigate h1:first-of-type { margin-top: 6px !important; }
+
+/* Kill lists */
+.navigate ul, .navigate ol, .navigate li {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ===== BUTTONS — ewan.my card style ===== */
+.navigate a, .navigate .internal-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 14px !important;
+  margin: 2px 0 !important;
+  border-radius: 5px !important;           /* ewan.my uses 5px */
+  background: transparent !important;      /* no bg by default */
+  border: none !important;                 /* no border */
+  color: var(--text-normal) !important;
+  opacity: 0.75 !important;                /* ewan.my file link opacity */
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease, background 0.15s ease !important;
+  cursor: pointer !important;
+}
+
+/* Hover — subtitle & lift */
+.navigate a:hover, .navigate .internal-link:hover {
+  opacity: 1 !important;
+  background: var(--background-secondary) !important;
+  color: var(--text-accent) !important;
+  text-decoration: none !important;
+}
+
+/* Active/current */
+.navigate a:active {
+  opacity: 1 !important;
+  color: var(--text-accent) !important;
+}
+
+.navigate a::after, .navigate .external-link::after {
+  display: none !important;
+}

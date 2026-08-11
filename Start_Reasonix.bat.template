@@ -1,0 +1,25 @@
+@echo off
+if "%REASONIX_WT%"=="1" goto :run
+set "REASONIX_WT=1"
+wt --title "Reasonix" cmd /k "%~f0"
+exit /b
+:run
+title Reasonix
+cd /d "%~dp0"
+
+echo ============================================
+echo   Reasonix - Second Brain AI
+echo ============================================
+echo.
+
+:: ============================================
+:: PUT YOUR DEEPSEEK KEY HERE (replace YOUR_DEEPSEEK_API_KEY)
+:: Key starts with sk-...  Account: platform.deepseek.com
+:: ============================================
+set "DEEPSEEK_API_KEY=YOUR_DEEPSEEK_API_KEY"
+
+:: Model: deepseek-v4-flash = fast and cheap (recommended)
+::        deepseek-v4-pro   = more powerful, more expensive
+reasonix --model deepseek-v4-flash
+
+pause

@@ -1,0 +1,20 @@
+{
+  "quickadd:choice:capture-to-inbox": [
+    {
+      "modifiers": [
+        "Mod",
+        "Alt"
+      ],
+      "key": "I"
+    }
+  ],
+  "omnisearch:show-modal": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "O"
+    }
+  ]
+}

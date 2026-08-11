@@ -1,0 +1,62 @@
+/* === ewan.my Theme — applied to entire Obsidian === */
+
+/* ----- Light mode (primary) ----- */
+.theme-light {
+  --ewan-light: #f5f1eb;
+  --ewan-lightgray: #e6dfd6;
+  --ewan-gray: #9a8f82;
+  --ewan-darkgray: #4a4238;
+  --ewan-dark: #2d2520;
+  --ewan-secondary: #a67c6d;
+  --ewan-tertiary: #8b7f73;
+  --ewan-highlight: rgba(166, 124, 109, 0.1);
+  --ewan-textHighlight: #f4d9c688;
+  --ewan-rust: #bf6159;
+  --ewan-clay: #c78d75;
+  --ewan-ochre: #cc9e54;
+  --ewan-sage: #869c7a;
+  --ewan-pine: #56706b;
+  --ewan-slate: #728c99;
+  --ewan-mauve: #9d868e;
+
+  /* Map to Obsidian vars */
+  --background-primary: var(--ewan-light);
+  --background-secondary: var(--ewan-lightgray);
+  --text-normal: var(--ewan-dark);
+  --text-muted: var(--ewan-gray);
+  --text-accent: var(--ewan-secondary);
+  --text-accent-hover: var(--ewan-tertiary);
+  --interactive-accent: var(--ewan-secondary);
+  --interactive-accent-hover: var(--ewan-tertiary);
+  --tag-background: var(--ewan-highlight);
+  --text-highlight-bg: var(--ewan-textHighlight);
+}
+
+/* ----- Dark mode ----- */
+.theme-dark {
+  --ewan-light: #1a1714;
+  --ewan-lightgray: #2a2520;
+  --ewan-gray: #6b6158;
+  --ewan-darkgray: #d4cec7;
+  --ewan-dark: #ebe7e1;
+  --ewan-secondary: #c59b8d;
+  --ewan-tertiary: #a89a8d;
+  --ewan-highlight: rgba(197, 155, 141, 0.12);
+  --ewan-textHighlight: #d4a58888;
+
+  --background-primary: var(--ewan-light);
+  --background-secondary: var(--ewan-lightgray);
+  --text-normal: var(--ewan-dark);
+  --text-muted: var(--ewan-gray);
+  --text-accent: var(--ewan-secondary);
+  --text-accent-hover: var(--ewan-tertiary);
+  --interactive-accent: var(--ewan-secondary);
+  --interactive-accent-hover: var(--ewan-tertiary);
+  --tag-background: var(--ewan-highlight);
+  --text-highlight-bg: var(--ewan-textHighlight);
+}
+
+/* ----- Borders & radius (ewan.my base) ----- */
+body {
+  --border-radius: 5px;
+}

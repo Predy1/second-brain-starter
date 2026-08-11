@@ -1,0 +1,17 @@
+{
+  "cssTheme": "Tokyo Night",
+  "baseFontSize": 16,
+  "textFontFamily": "Inter, -apple-system, sans-serif",
+  "monospaceFontFamily": "JetBrains Mono, Fira Code, monospace",
+  "interfaceFontFamily": "Inter, -apple-system, sans-serif",
+  "enabledCssSnippets": [
+    "folder-colors",
+    "tag-colors",
+    "note-status",
+    "graph-view",
+    "bookmarks-buttons",
+    "navigate-buttons",
+    "ewan-theme"
+  ],
+  "accentColor": ""
+}
