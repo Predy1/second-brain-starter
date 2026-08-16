@@ -97,6 +97,27 @@
         "a": 1,
         "rgb": 16717636
       }
+    },
+    {
+      "query": "tag:#idea",
+      "color": {
+        "a": 1,
+        "rgb": 4244735
+      }
+    },
+    {
+      "query": "tag:#agent-insight",
+      "color": {
+        "a": 1,
+        "rgb": 11225020
+      }
+    },
+    {
+      "query": "tag:#lesson",
+      "color": {
+        "a": 1,
+        "rgb": 6732650
+      }
     }
   ],
   "collapse-display": false,

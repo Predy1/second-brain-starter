@@ -31,6 +31,23 @@ a.tag[href="#archived"],
   color: #1a1a1a;
 }
 
+a.tag[href="#checked"],
+.tag[data-tag="checked"] {
+  background-color: #1abc9c;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+a.tag[href="#read"],
+.tag[data-tag="read"] {
+  background-color: #27ae60;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
 /* ===== CATEGORY TAGS ===== */
 a.tag[href="#trading"],
 .tag[data-tag="trading"] {
@@ -102,6 +119,23 @@ a.tag[href="#solved"],
   font-weight: 600;
 }
 
+/* ===== AGENT / LESSON TAGS ===== */
+a.tag[href="#agent-insight"],
+.tag[data-tag="agent-insight"] {
+  background-color: #ab47bc;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+a.tag[href="#lesson"],
+.tag[data-tag="lesson"] {
+  background-color: #66bb6a;
+  color: #1a1a1a;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
 /* ===== TECH TAGS ===== */
 a.tag[href="#programming"],
 .tag[data-tag="programming"] {
@@ -132,4 +166,28 @@ a.tag[href="#mql5"],
 .tag:hover {
   filter: brightness(1.15);
   transform: scale(1.05);
+}
+
+/* ============================================================
+   SUPERCHARGED LINKS — link-uri către note #checked / #read
+   (pluginul adaugă data-link-tags pe link-uri)
+   ============================================================ */
+.internal-link[data-link-tags*="#checked" i],
+.cm-hmd-internal-link [data-link-tags*="#checked" i] {
+  color: #1abc9c;
+  font-weight: 600;
+}
+
+.internal-link[data-link-tags*="#read" i],
+.cm-hmd-internal-link [data-link-tags*="#read" i] {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.data-link-icon[data-link-tags*="#checked" i]::before {
+  content: "✓ ";
+}
+
+.data-link-icon[data-link-tags*="#read" i]::before {
+  content: "📖 ";
 }

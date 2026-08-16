@@ -9,7 +9,7 @@ A clean, ready-to-use **Obsidian Second Brain** with an AI assistant built in �
 | 📓 **Obsidian vault** | Second Brain structure — same layout as the original (Dashboard, Master, Journal, Memory, Thoughts, Inbox, Projects, Resources, Private, Clippings, Bases) | Free |
 | 🧠 **Main AI** | **Copilot** — chat AI built into Obsidian. Copilot Plus flash models (built-in, no keys) or bring your own key (OpenRouter / OpenAI / DeepSeek / Gemini) | Free (BYO key) / Copilot Plus optional |
 | 🏠 **Offline AI** (optional) | Ollama — local models, when you have no internet | Free |
-| 🤖 **Agent team** | Built into the AI via `3_System/AGENT_ROLES.md` — Skeptic, Debugger, Researcher, Verifier, Strategist (invoke by name) | Free |
+| 🤖 **Agent team** | Built into the AI via `3_System/AGENT_ROLES.md` — 7 roles: Skeptic, Debugger, Researcher, Verifier, Strategist, Second Brain Vault Agent, Efficientizer (invoke by name) | Free |
 | 🎤 **Voice input** | Win+H (Windows Voice Typing) + any language pack | Free |
 
 ## 🚀 Quick start
@@ -82,7 +82,7 @@ Second Brain/            ← name the vault folder exactly like this
 ## 🎨 Style
 
 - Clean structure, most text neutral/plain
-- **Agent team** (`3_System/AGENT_ROLES.md`): Skeptic, Debugger, Researcher, Verifier, Strategist — invoke them by name
+- **Agent team** (`3_System/AGENT_ROLES.md`): 7 roles — Skeptic, Debugger, Researcher, Verifier, Strategist, Second Brain Vault Agent, Efficientizer — invoke them by name
 - A bit of character: DAILY_STARTUP and Dashboard have a direct, action-first tone
 
 ## 🔒 About API keys

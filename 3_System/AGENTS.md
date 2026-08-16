@@ -50,8 +50,12 @@ This document defines the behavior rules, technical constraints, and safety red 
 - 📚 **Researcher** — researches any topic
 - ✅ **Verifier** — validation checklist before decisions
 - 🧠 **Strategist** — connects domains, architecture
+- 🗂️ **Second Brain Vault Agent** — curates and connects the vault (cleanup, dedup, MOCs)
+- ⚡ **Efficientizer** — finds the fastest way to do anything
 
 5.3. Invoke an agent by writing its name in chat: `"Skeptic, analyze X"`.
+
+5.4. Agent conclusions are saved with the tag `#agent-insight`.
 
 ---
 
