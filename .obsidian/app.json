@@ -4,6 +4,9 @@
   "attachmentFolderPath": "2_Wiki/Attachments",
   "promptDelete": false,
   "showUnsupportedFiles": false,
+  "userIgnoreFilters": [
+    "copilot/"
+  ],
   "defaultViewMode": "source",
   "showLineNumber": true,
   "showIndentGuide": false,

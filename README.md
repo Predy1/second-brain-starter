@@ -6,52 +6,57 @@ A clean, ready-to-use **Obsidian Second Brain** with an AI assistant built in �
 
 | Component | What it is | Cost |
 |---|---|---|
-| 📓 **Obsidian vault** | Second Brain structure (Dashboard, Journal, Memory, Thoughts, Inbox) | Free |
-| 🧠 **Main AI** | **DeepSeek V4-Flash** (direct, simple .bat launcher) — or Google Gemini Flash via LiteLLM | ~$2-5 one-time top-up (DeepSeek) / free (Gemini) |
-| 🏠 **Offline AI** (optional) | Ollama + `qwen2.5:1.5b` — when you have no internet | Free |
-| 🤖 **Agent** | Reasonix — AI assistant with a specialized agent team (Skeptic, Debugger, Researcher, Verifier, Strategist) | Free |
+| 📓 **Obsidian vault** | Second Brain structure — same layout as the original (Dashboard, Master, Journal, Memory, Thoughts, Inbox, Projects, Resources, Private, Clippings, Bases) | Free |
+| 🧠 **Main AI** | **Copilot** — chat AI built into Obsidian. Copilot Plus flash models (built-in, no keys) or bring your own key (OpenRouter / OpenAI / DeepSeek / Gemini) | Free (BYO key) / Copilot Plus optional |
+| 🏠 **Offline AI** (optional) | Ollama — local models, when you have no internet | Free |
+| 🤖 **Agent team** | Built into the AI via `3_System/AGENT_ROLES.md` — Skeptic, Debugger, Researcher, Verifier, Strategist (invoke by name) | Free |
 | 🎤 **Voice input** | Win+H (Windows Voice Typing) + any language pack | Free |
 
 ## 🚀 Quick start
 
-See **[SETUP_GUIDE.md](SETUP_GUIDE.md)** — steps 1-8, everything you need to install and configure.
-
-Prefer a 3-step path? Go straight to **Variant B (DeepSeek direct)** in the setup guide — no LiteLLM, no YAML, just one `.bat` file.
+See **[SETUP_GUIDE.md](SETUP_GUIDE.md)** — 4 steps, everything you need to install and configure (~15 minutes).
 
 ## 📁 Vault structure
 
 ```
-SecondBrain/
-├── CLAUDE.md              → Router for the AI (what it reads first)
-├── AGENTS.md              → Redirect to the real rules
-├── IDENTITY.md            → Who your AI is (filled during BOOTSTRAP)
-├── USER.md                → Who you are
-├── SOUL.md                → What matters to you
-├── SESSION.md             → Where you left off (resume point)
-├── TOOLS.md               → Tools and skills
-├── HEARTBEAT.md           → Periodic checks
-├── _INBOX.md              → Quick capture
-├── memory/                → Daily notes (YYYY-MM-DD.md)
-├── 2_Wiki/                → Your content
-│   ├── Dashboard.md       → Command center
-│   ├── index.md           → Wiki index
-│   ├── Navigate.md        → Quick navigation
-│   ├── log.md             → Operations log
-│   ├── Memory/            → Long-term memory
-│   ├── Journal/           → Daily journal
-│   ├── Inbox/             → Ideas / capture
-│   └── Thoughts/          → Reflections
-└── 3_System/              → AI rules and configuration
-    ├── AGENTS.md          → AI behavior rules
-    ├── AGENT_ROLES.md     → Specialized agent team
-    ├── BOOTSTRAP.md       → First conversation with your AI
-    ├── DAILY_STARTUP.md   → Daily ritual
-    ├── STARTUP_CHECKLIST.md → Session discipline
-    ├── SELF_IMPROVEMENT.md → Lessons learned
-    └── VALIDATION_GATES.md → Fixed rules before decisions
+Second Brain/            ← name the vault folder exactly like this
+├── 00_MASTER.md         → Master context (current goal, plan, key facts)
+├── 00_DASHBOARD.canvas  → Dashboard hub (visual map of the vault)
+├── CLAUDE.md            → Router for the AI (what it reads first)
+├── AGENTS.md            → Redirect to the real rules
+├── IDENTITY.md          → Who your AI is (filled during BOOTSTRAP)
+├── USER.md              → Who you are
+├── SOUL.md              → What matters to you
+├── SESSION.md           → Where you left off (resume point)
+├── TOOLS.md             → Tools and skills
+├── HEARTBEAT.md         → Periodic checks
+├── HOTCACHE.md          → Session context (distilled, updated often)
+├── MEMORY.md            → Long-term memory (curated)
+├── _INBOX.md            → Quick capture
+├── Projects.base · Tasks.base · Books.base · Papers.base · Youtube.base
+├── memory/              → Daily notes (YYYY-MM-DD.md)
+├── 2_Wiki/              → Your content
+│   ├── Dashboard.md · index.md · Navigate.md · log.md · Kanban.md
+│   ├── Attachments/ · Inbox/ · Journal/ · Memory/ · Thoughts/
+│   ├── Business/ · CRM/ · Freelancing/ · Gaming/ · Health/
+│   ├── PC_Optimization/ · Personal/ · Second_Brain/ · Trading/
+├── 3_System/            → AI rules and configuration
+│   ├── AGENTS.md        → AI behavior rules
+│   ├── AGENT_ROLES.md   → Specialized agent team
+│   ├── BOOTSTRAP.md     → First conversation with your AI
+│   ├── DAILY_STARTUP.md → Daily ritual
+│   ├── STARTUP_CHECKLIST.md → Session discipline
+│   ├── SELF_IMPROVEMENT.md → Lessons learned
+│   └── VALIDATION_GATES.md → Fixed rules before decisions
+├── Projects/            → Project notes (visible in Projects.base)
+├── Resources/           → Books/ · Papers/ · Youtube/ (visible in the bases)
+├── Private/             → Personal notes, not for sharing
+├── Clippings/           → Raw web clips to process
+├── _archive/            → Old/unsorted notes (read-only for the AI)
+└── copilot/             → Copilot conversations (auto-created, git-ignored)
 ```
 
-## 🔌 Included plugins (12)
+## 🔌 Included plugins (14)
 
 | Plugin | What it does |
 |---|---|
@@ -67,8 +72,10 @@ SecondBrain/
 | **Kanban** | Kanban boards |
 | **Persistent Graph** | Graph position persists |
 | **HTML Plugin** | Import HTML files |
+| **Supercharged Links** | Styled/iconed links based on note tags |
+| **Style Settings** | Adjust themes and snippets from the settings UI |
 
-**Theme:** Tokyo Night · **CSS snippets:** 7 (folder colors, tag colors, note status, graph view, navigation buttons)
+**Snippets:** 9 (folder colors, tag colors, note status, graph view, navigation buttons, bookmarks buttons, ewan theme, clipping cards, supercharged links) — same colors and filters as the original vault.
 
 > Note: plugins are installed in `.obsidian/plugins/` but **not activated automatically** — on first open Obsidian asks permission to enable them.
 
@@ -80,11 +87,11 @@ SecondBrain/
 
 ## 🔒 About API keys
 
-**Never put real API keys in this public repo.** Your key goes only into a local file — see SETUP_GUIDE.md (`.env` or `Start_Reasonix.bat`, both git-ignored).
+**Never put real API keys in this public repo.** Your key goes only into the Copilot settings inside Obsidian (stored in `.obsidian/plugins/copilot/data.json`, git-ignored). Never write a key into a note.
 
 ## 🛠️ Troubleshooting
 
-See **[TROUBLESHOOTING_PLAYBOOK.md](TROUBLESHOOTING_PLAYBOOK.md)** — real errors from real setups, with verified fixes (PowerShell `npm.ps1` blocks, LiteLLM/FastAPI conflicts, API-key issues, and more).
+See **[TROUBLESHOOTING_PLAYBOOK.md](TROUBLESHOOTING_PLAYBOOK.md)** — common problems and fixes (plugins not enabled, model/API-key errors, indexing, and more).
 
 ---
 

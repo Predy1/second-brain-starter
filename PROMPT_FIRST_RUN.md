@@ -1,37 +1,72 @@
-# 🤖 FIRST-RUN PROMPT — paste this into Reasonix
+# 🤖 FIRST-RUN PROMPT — paste this into Copilot (Obsidian)
 
-> Copy-paste the whole block below into Reasonix (after it starts from `Start_Reasonix.bat`).
-
----
-
-I'm on a Windows laptop, just installed Reasonix. Help me finish the setup correctly, without repeating the classic mistakes.
-
-CONTEXT (read these first, in order):
-1. TROUBLESHOOTING_PLAYBOOK.md — all already-solved errors + exact fixes
-2. SETUP_GUIDE.md — Variant A (Gemini via LiteLLM) or Variant B (DeepSeek direct)
-3. REPOPACK_CONTEXT.md — all the vault context
-
-GOAL: Get me set up with a working AI (DeepSeek recommended — simple, one .bat), with a .bat that starts everything on double-click.
-
-STEPS:
-1. Check if I have an API key in .env or ask me for it (DeepSeek: platform.deepseek.com → API Keys → starts with sk-)
-2. Copy Start_Reasonix.bat.template → Start_Reasonix.bat and put my key in it (NOT in the template!)
-3. Verify Reasonix starts with: reasonix --model deepseek-v4-flash
-4. Test each step before the next; at any error, stop and explain what I should do
-
-RULES:
-- New error? Look it up in TROUBLESHOOTING_PLAYBOOK.md first
-- PowerShell: exe in quotes = `&` in front; `.ps1` blocked = use `.cmd` (e.g. npm.cmd)
-- Never print API keys in output
-- At the end: summary of what you configured + how I start everything with one click
+> Open **Copilot chat** in Obsidian and paste the whole block below as your first message.
+> This guides the AI to set up your vault the same way as the original "Second Brain" vault: same layout, same naming, same workflow.
 
 ---
 
-## Note on variants
+I just installed this Second Brain vault and I want you to help me bootstrap it exactly like the original setup. Follow these steps:
 
-| Variant | AI | Cost | Complexity |
-|---|---|---|---|
-| **B (recommended)** | DeepSeek V4-Flash | ~$2-5 one-time top-up | Low — one .bat |
-| A | Gemini (via LiteLLM) | 100% free | High — proxy + YAML config + FastAPI |
+## 0. Vault name
+- The vault folder must be named **"Second Brain"** (two words, with a space) — like the original.
+- If the folder currently has another name (e.g. "SecondBrain" or "second-brain-starter"), tell me exactly how to rename it on Windows (close Obsidian → rename the folder → reopen the folder as vault).
 
-**Choose B** if you want fast and simple. Choose A only if you want strictly free and are OK with extra steps.
+## 1. Read the vault first, in this order:
+- `AGENTS.md` and `CLAUDE.md` (the router) — behavior rules and where everything lives
+- `3_System/AGENTS.md` and `3_System/AGENT_ROLES.md` — the full rules and your agent team (Skeptic, Debugger, Researcher, Verifier, Strategist)
+- `3_System/BOOTSTRAP.md`, `3_System/DAILY_STARTUP.md`, `3_System/VALIDATION_GATES.md`
+- `00_MASTER.md`, `MEMORY.md`, `HOTCACHE.md`, `_INBOX.md`
+- `2_Wiki/Dashboard.md`, `2_Wiki/index.md`, `2_Wiki/Navigate.md`
+
+## 2. Verify the layout matches the original (create anything missing)
+The Files sidebar should look like this — identical structure to the original "Second Brain":
+```
+Second Brain/
+├── 00_MASTER.md          → master context (current goal, plan, key facts)
+├── 00_DASHBOARD.canvas   → dashboard hub (links to the key files)
+├── _INBOX.md             → quick capture at root
+├── MEMORY.md             → long-term memory (curated)
+├── HOTCACHE.md           → session context (distilled, updated often)
+├── SESSION.md            → where I left off
+├── CLAUDE.md / AGENTS.md / IDENTITY.md / SOUL.md / USER.md / TOOLS.md / HEARTBEAT.md
+├── Projects.base / Tasks.base / Books.base / Papers.base / Youtube.base
+├── memory/               → daily notes (YYYY-MM-DD.md)
+├── 2_Wiki/               → content
+│   ├── Dashboard.md, index.md, Navigate.md, log.md, Kanban.md
+│   ├── Attachments/ Inbox/ Journal/ Memory/ Thoughts/
+│   ├── Business/ CRM/ Freelancing/ Gaming/ Health/
+│   ├── PC_Optimization/ Personal/ Second_Brain/ Trading/
+├── 3_System/             → AI rules + templates (AGENTS.md, AGENT_ROLES.md, BOOTSTRAP.md, ...)
+├── Projects/  Resources/ (Books, Papers, Youtube)  Private/  Clippings/  _archive/
+└── copilot/              → Copilot conversations (auto-created, git-ignored)
+```
+
+- If a folder or file from this layout is missing, create it (folders with a `.gitkeep` so git keeps them).
+- Do NOT copy any content from the original vault — this is my own vault, same structure only.
+
+## 2b. Verify the Obsidian setup matches the original (plugins, filters, graph)
+- **14 community plugins** should be installed and enabled: Copilot, Claude Sidebar, Dataview, Templater, Smart Connections, Various Complements, Omnisearch, QuickAdd, Custom Frames, Kanban, Persistent Graph, HTML Plugin, Supercharged Links, Style Settings.
+- **9 CSS snippets** should be enabled (Settings → Appearance): folder-colors, tag-colors, note-status, graph-view, bookmarks-buttons, navigate-buttons, ewan-theme, clippings-cards (+ supercharged-links-gen, auto-generated by the plugin).
+- **Graph colors** (colorGroups) should be set for the main folders: Trading, Second_Brain, Personal, Business, Journal, CRM, Gaming, Health, PC_Optimization/Freelancing/Memory/Attachments, 3_System, Clippings.
+- If any of these are missing/disabled, tell me how to enable them — do not disable or remove anything.
+
+## 3. Ask me a few short questions
+Max 5-6, conversational: name, what I do, timezone, what matters to me, tone preferences.
+
+## 4. Fill in the files with what I answer:
+- `3_System/USER.md` — who I am
+- `IDENTITY.md` — who YOU are (name, what you are, vibe, emoji)
+- `SOUL.md` — what matters to me (values, priorities)
+- `SESSION.md` — a short session plan for today
+- `00_MASTER.md` — my current goal (if I mention one)
+
+## 5. At the end, give me a 3-line summary:
+what you configured, how to use you day-to-day (just chat in Copilot), and one suggestion for my first real task.
+
+**Rules:**
+- Do NOT write API keys anywhere.
+- Do NOT invent facts about me — only write what I actually told you.
+- Keep every file concise and useful, no filler.
+- The vault name stays **"Second Brain"** — always refer to it like that.
+
+---

@@ -1,0 +1,12 @@
+filters:
+  and:
+    - class == "project"
+
+views:
+  - type: table
+    name: Projects
+    order:
+      - status
+      - priority
+      - deadline
+      - progress

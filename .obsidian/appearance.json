@@ -1,5 +1,5 @@
 {
-  "cssTheme": "Tokyo Night",
+  "cssTheme": "",
   "baseFontSize": 16,
   "textFontFamily": "Inter, -apple-system, sans-serif",
   "monospaceFontFamily": "JetBrains Mono, Fira Code, monospace",
@@ -11,7 +11,8 @@
     "graph-view",
     "bookmarks-buttons",
     "navigate-buttons",
-    "ewan-theme"
+    "ewan-theme",
+    "clippings-cards"
   ],
   "accentColor": ""
 }

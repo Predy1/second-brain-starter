@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"a1b2c3d4e5f60781","type":"group","x":0,"y":0,"width":920,"height":180,"label":"🎯 Start Here","color":"5"},
+		{"id":"a1b2c3d4e5f60782","type":"file","x":20,"y":40,"width":270,"height":120,"file":"00_MASTER.md","color":"5"},
+		{"id":"a1b2c3d4e5f60783","type":"file","x":310,"y":40,"width":270,"height":120,"file":"2_Wiki/Dashboard.md","color":"5"},
+		{"id":"a1b2c3d4e5f60784","type":"file","x":600,"y":40,"width":270,"height":120,"file":"HOTCACHE.md","color":"5"},
+		{"id":"a1b2c3d4e5f60785","type":"group","x":0,"y":200,"width":920,"height":180,"label":"⚡ Quick Actions","color":"2"},
+		{"id":"a1b2c3d4e5f60786","type":"file","x":20,"y":240,"width":270,"height":120,"file":"_INBOX.md","color":"2"},
+		{"id":"a1b2c3d4e5f60787","type":"file","x":310,"y":240,"width":270,"height":120,"file":"2_Wiki/Inbox","color":"2"},
+		{"id":"a1b2c3d4e5f60788","type":"file","x":600,"y":240,"width":270,"height":120,"file":"2_Wiki/Journal","color":"2"},
+		{"id":"a1b2c3d4e5f60789","type":"group","x":0,"y":400,"width":920,"height":180,"label":"🧠 Memory","color":"3"},
+		{"id":"a1b2c3d4e5f60790","type":"file","x":20,"y":440,"width":270,"height":120,"file":"MEMORY.md","color":"3"},
+		{"id":"a1b2c3d4e5f60791","type":"file","x":310,"y":440,"width":270,"height":120,"file":"memory","color":"3"},
+		{"id":"a1b2c3d4e5f60792","type":"file","x":600,"y":440,"width":270,"height":120,"file":"2_Wiki/Memory","color":"3"},
+		{"id":"a1b2c3d4e5f60793","type":"group","x":0,"y":600,"width":920,"height":180,"label":"⚙️ System","color":"6"},
+		{"id":"a1b2c3d4e5f60794","type":"file","x":20,"y":640,"width":270,"height":120,"file":"3_System/AGENTS.md","color":"6"},
+		{"id":"a1b2c3d4e5f60795","type":"file","x":310,"y":640,"width":270,"height":120,"file":"CLAUDE.md","color":"6"},
+		{"id":"a1b2c3d4e5f60796","type":"file","x":600,"y":640,"width":270,"height":120,"file":"3_System/BOOTSTRAP.md","color":"6"},
+		{"id":"a1b2c3d4e5f60797","type":"group","x":0,"y":800,"width":920,"height":180,"label":"🧭 Navigate","color":"4"},
+		{"id":"a1b2c3d4e5f60798","type":"file","x":20,"y":840,"width":270,"height":120,"file":"2_Wiki/Navigate.md","color":"4"},
+		{"id":"a1b2c3d4e5f60799","type":"file","x":310,"y":840,"width":270,"height":120,"file":"2_Wiki/index.md","color":"4"},
+		{"id":"a1b2c3d4e5f60800","type":"file","x":600,"y":840,"width":270,"height":120,"file":"2_Wiki/Thoughts","color":"4"}
+	],
+	"edges":[]
+}

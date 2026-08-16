@@ -1,130 +1,99 @@
-# 🛠️ TROUBLESHOOTING PLAYBOOK — Common problems + verified fixes
+# 🛠️ TROUBLESHOOTING PLAYBOOK — Common problems + fixes
 
-> Every error below appeared REAL during actual setups and was solved. If you see one, the fix is here.
-
----
-
-## 1. `npm : File ...npm.ps1 cannot be loaded because running scripts is disabled`
-
-**Cause:** PowerShell blocks scripts (execution policy = Restricted). Node is installed correctly, but PowerShell refuses `npm.ps1`.
-
-**Fix (works instantly):**
-```
-npm.cmd i -g reasonix
-```
-Or (permanent, once):
-```
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-```
-Or just open classic CMD (type `cmd` in Start) — there `npm` works directly.
+> The setup is intentionally simple: Obsidian + the Copilot plugin. If something misbehaves, the fix is usually one of these.
 
 ---
 
-## 2. `The '--' operator works only on variables... Unexpected token 'config'`
+## 1. Obsidian says "Restricted mode" — plugins can't be enabled
 
-**Cause:** PowerShell, command with a quoted path without `&` at the start.
+**Cause:** Community plugins are off by default for safety.
+
+**Fix:** Settings → **Community plugins** → **Turn on community plugins**. Then enable Copilot from the plugin list.
+
+---
+
+## 2. Copilot is enabled but no chat icon/sidebar appears
 
 **Fix:**
-```
-& "C:\full\path\program.exe" --config config.yaml
-```
-In PowerShell, any exe with a quoted path needs `&` in front.
+1. Reload the vault: Ctrl+R
+2. Open via Command Palette (Ctrl+P) → type **"Copilot: Open chat"**
+3. If still missing → disable and re-enable the plugin, then reload again
 
 ---
 
-## 3. `Error: Option '--port' requires an argument`
+## 3. Chat says the model is not available / "model not found"
 
-**Cause:** The command was cut off at `--port`, without the value `4000` on the same line.
-
-**Fix:** Whole command on ONE line, `4000` before Enter:
-```
-litellm --config litellm_config.yaml --port 4000
-```
-
----
-
-## 4. `ImportError: cannot import name 'get_flat_dependant' from 'fastapi...'`
-
-**Cause:** FastAPI too old, incompatible with newer LiteLLM (version conflict).
+**Cause:** The selected model isn't available on your plan or provider.
 
 **Fix:**
-```
-python -m pip install --upgrade --force-reinstall "litellm[proxy]"
-```
-This reinstalls everything clean (FastAPI, uvicorn, pydantic to compatible versions).
+- Copilot Plus models → check the Copilot Plus subscription is active in Copilot settings
+- BYO key models → verify the provider actually offers that model (e.g. OpenRouter model list), and that the key has access
+- Switch to a known-good model from the dropdown and retry
 
 ---
 
-## 5. `litellm is not recognized`
+## 4. Error 401 / Authentication failed
 
-**Cause:** The exe is installed but not on PATH (especially with Python from the Microsoft Store).
+**Cause:** The API key is invalid, expired, or was never entered.
 
-**Fix — find the exact path:**
-```
-python -c "import sysconfig; print(sysconfig.get_path('scripts'))"
-```
-Then run with the full path:
-```
-& "C:\path\from\above\litellm.exe" --config litellm_config.yaml --port 4000
-```
-Or add the Scripts folder to PATH (System Properties → Environment Variables → Path → New).
+**Fix:**
+- Copilot settings → paste the key again (copy it fresh from the provider dashboard)
+- Providers show the key **only once** at creation — if you lost it, generate a new one
+- No key in the vault → you haven't configured a model; choose Copilot Plus or add a key
 
 ---
 
-## 6. `python -m litellm` → `No module named llm.__main__`
+## 5. Error 429 / "quota exceeded"
 
-**Cause:** LiteLLM does NOT run with `python -m`. Only the direct exe works.
+**Cause:** The free tier or your balance ran out.
 
-**Fix:** Never use `python -m litellm`. Use `litellm --config ...` directly (or with the full path).
-
----
-
-## 7. `! provider "deepseek-v4-flash" requires DEEPSEEK_API_KEY` / `Authentication failed (HTTP 401)`
-
-**Cause:** The API key isn't reaching Reasonix. The `/config` and `/reasonix-guide sk-...` commands DON'T work (they're not key-configuration commands).
-
-**Fix (the correct one):**
-1. Exit the chat: `exit`
-2. Run in terminal: `reasonix setup` → choose DeepSeek → paste your key
-3. Or create a `.env` file in the root with a single line:
-```
-DEEPSEEK_API_KEY=sk-...your_key...
-```
-4. Restart `reasonix --model deepseek-v4-flash`
-
-**Verify:**
-```
-echo %DEEPSEEK_API_KEY%
-```
-If you see the key → all good.
+**Fix:**
+- Free tier (e.g. Gemini): wait for the quota reset, or add a paid key
+- DeepSeek/OpenRouter: top up the account
+- Local Ollama model: no quota, works offline
 
 ---
 
-## 8. Key doesn't show up after `setx` / environment variable
+## 6. Chat answers are weak / don't use the vault
 
-**Fix:** Close and reopen the terminal — `setx` writes permanently, but it only loads in a new terminal. Or use the .bat which sets the key automatically on every start.
+**Cause:** The model doesn't have vault context, or an embedding model isn't configured for "chat with vault".
+
+**Fix:**
+- Make sure Copilot settings → embedding model is set (default: `gemini-embedding-001`)
+- Reference the note in chat, or use the "chat with vault" mode so Copilot searches your notes
+- Check the model chosen — small/cheap models answer weaker
 
 ---
 
-## 9. Windows hides extensions (.bat not visible)
+## 7. Conversations/keys accidentally in git
+
+**Cause:** `data.json` (Copilot settings, contains keys) or `copilot/copilot-conversations/` (chat history) got committed.
+
+**Fix:**
+- They are git-ignored in this repo (`.gitignore`) — if you changed it, restore that
+- If already committed: remove them from tracking with `git rm --cached <file>`, add to `.gitignore`, then commit
+- Rotate any key that was exposed — treat it as public
+
+---
+
+## 8. Windows hides file extensions
 
 **Fix:** File Explorer → View → Show → **File name extensions** → check it.
 
 ---
 
-## 10. The difference between `.template` and the real file
+## 9. Voice input (Win+H) doesn't type into Obsidian
 
-- `Start_Reasonix.bat.template` → the model, DON'T edit it
-- `Start_Reasonix.bat` → the real copy, HERE you put the key
-
-**Steps:** copy the template → rename without `.template` → Notepad → put your key → save.
+**Fix:**
+- Add your language + speech pack in **Settings → Time & Language**
+- If Speech doesn't appear for your language → use [dictation.io](https://dictation.io) and paste
 
 ---
 
 ## Golden rules
 
-1. **In PowerShell:** exe in quotes = `&` in front. Use `.cmd` commands if `.ps1` is blocked.
-2. **Never use `python -m litellm`** — only the direct exe.
-3. **Never put keys in slash commands** — keys go into `reasonix setup` or `.env`.
-4. **Personal key = your own account** — don't share keys with anyone; everyone makes their own account.
-5. **After any PATH/environment change** → close and reopen the terminal.
+1. **API keys go ONLY into Copilot settings** — never into notes, never into the repo.
+2. **Each person makes their own account/key** — don't share keys with anyone.
+3. **If a key was ever committed or shared → generate a new one** and delete the old.
+4. **No internet?** Use an Ollama local model (weak but free).
+5. **Anything weird → reload Obsidian (Ctrl+R) first**, then check the plugin list, then the model config.

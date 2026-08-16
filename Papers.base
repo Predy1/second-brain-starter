@@ -1,0 +1,12 @@
+filters:
+  and:
+    - file.inFolder("Resources/Papers")
+
+views:
+  - type: cards
+    name: Papers
+    order:
+      - author
+      - tags
+      - related
+      - source

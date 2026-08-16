@@ -1,0 +1,14 @@
+filters:
+  and:
+    - file.inFolder("Resources/Youtube")
+
+views:
+  - type: cards
+    name: Youtube
+    order:
+      - author
+      - completed
+      - watched
+      - related
+      - tags
+      - source

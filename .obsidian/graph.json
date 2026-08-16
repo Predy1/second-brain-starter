@@ -1,0 +1,114 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:2_Wiki/Trading",
+      "color": {
+        "a": 1,
+        "rgb": 16739125
+      }
+    },
+    {
+      "query": "path:2_Wiki/Second_Brain",
+      "color": {
+        "a": 1,
+        "rgb": 4492031
+      }
+    },
+    {
+      "query": "path:2_Wiki/Personal",
+      "color": {
+        "a": 1,
+        "rgb": 14696699
+      }
+    },
+    {
+      "query": "path:2_Wiki/Business",
+      "color": {
+        "a": 1,
+        "rgb": 16766720
+      }
+    },
+    {
+      "query": "path:2_Wiki/Journal",
+      "color": {
+        "a": 1,
+        "rgb": 16749824
+      }
+    },
+    {
+      "query": "path:2_Wiki/CRM",
+      "color": {
+        "a": 1,
+        "rgb": 1954209
+      }
+    },
+    {
+      "query": "path:2_Wiki/Gaming",
+      "color": {
+        "a": 1,
+        "rgb": 16728193
+      }
+    },
+    {
+      "query": "path:2_Wiki/Health",
+      "color": {
+        "a": 1,
+        "rgb": 16732754
+      }
+    },
+    {
+      "query": "path:2_Wiki/PC_Optimization OR path:2_Wiki/Freelancing OR path:2_Wiki/Memory OR path:2_Wiki/Attachments",
+      "color": {
+        "a": 1,
+        "rgb": 10527800
+      }
+    },
+    {
+      "query": "path:3_System",
+      "color": {
+        "a": 1,
+        "rgb": 7901340
+      }
+    },
+    {
+      "query": "path:Clippings",
+      "color": {
+        "a": 1,
+        "rgb": 16739584
+      }
+    },
+    {
+      "query": "tag:#goal-master",
+      "color": {
+        "a": 1,
+        "rgb": 16771584
+      }
+    },
+    {
+      "query": "tag:#problemă OR tag:#problem",
+      "color": {
+        "a": 1,
+        "rgb": 16717636
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0.2,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.25,
+  "repelStrength": 12,
+  "linkStrength": 0.7,
+  "linkDistance": 180,
+  "scale": 0.042315902689759086,
+  "close": true
+}

@@ -2,8 +2,10 @@
 *.key
 *KEY*.txt
 .env
-litellm_config.yaml
-Start_Reasonix.bat
+.obsidian/plugins/*/data.json
+
+# === CONVERSAȚII COPILOT (se scriu la fiecare chat) ===
+copilot/copilot-conversations/
 
 # === LOCAL ONLY — varianta personalizată (nu se publică) ===
 _local/

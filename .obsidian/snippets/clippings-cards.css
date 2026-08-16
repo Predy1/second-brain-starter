@@ -1,0 +1,119 @@
+/* ============================================================
+   CLIPPINGS CARDS — vizualizare carduri (DataviewJS)
+   Thumbnail + titlu + badge status, grupat pe tip
+   ============================================================ */
+
+.cc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 8px 0 24px;
+}
+
+.cc-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.cc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  border-color: var(--interactive-accent);
+}
+
+.cc-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  background: var(--background-secondary-alt);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.cc-thumb-ph {
+  color: var(--text-muted);
+}
+
+.cc-body {
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cc-title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cc-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.cc-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.cc-badge-new {
+  background: #f39c12;
+  color: #1a1a1a;
+}
+
+.cc-badge-checked {
+  background: #1abc9c;
+  color: #ffffff;
+}
+
+.cc-badge-read {
+  background: #27ae60;
+  color: #ffffff;
+}
+
+.cc-badge-processed {
+  background: #7c4dff;
+  color: #ffffff;
+}
+
+.cc-date {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ===== Border stânga după status ===== */
+.cc-new {
+  border-left: 3px solid #f39c12;
+}
+
+.cc-checked {
+  border-left: 3px solid #1abc9c;
+}
+
+.cc-read {
+  border-left: 3px solid #27ae60;
+}
+
+.cc-processed {
+  border-left: 3px solid #7c4dff;
+}

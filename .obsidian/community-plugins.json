@@ -1,5 +1,4 @@
 [
-  "copilot",
   "obsidian-custom-frames",
   "claude-sidebar",
   "dataview",
@@ -10,5 +9,8 @@
   "obsidian-kanban",
   "quickadd",
   "omnisearch",
-  "obsidian-html-plugin"
+  "obsidian-html-plugin",
+  "supercharged-links-obsidian",
+  "obsidian-style-settings",
+  "copilot"
 ]

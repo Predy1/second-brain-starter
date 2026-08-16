@@ -1,0 +1,12 @@
+filters:
+  and:
+    - class == "task"
+
+views:
+  - type: table
+    name: Tasks
+    order:
+      - status
+      - priority
+      - contexts
+      - dateCreated
